@@ -1,5 +1,5 @@
 console.log('loading')
-let url="https://www.abibliadigital.com.br/api/"
+let url="https://www.abibliadigital.com.br/api"
 
 var app = new Vue({
     el:"#vuehome",
@@ -8,10 +8,10 @@ var app = new Vue({
     },
 
     created: function () {
-        axios.get('/verses/nvi/sl/23').then(
+        axios.get(url+'/verses/nvi/sl/23').then(
             (resposta) => {
                 this.versiculo = resposta.data;
-                console.log(this.versiculo);
+                console.log(this.versiculo.verses[0]);
 
             });
     }
