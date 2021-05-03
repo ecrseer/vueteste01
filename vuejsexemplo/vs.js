@@ -6,6 +6,7 @@ var app = new Vue({
     data:{
         carros:0
     },
+
     created: function () {
         axios.get('./listacarros.json').then(
             (resposta) => {
