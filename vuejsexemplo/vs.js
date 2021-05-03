@@ -1,17 +1,17 @@
 console.log('loading')
-let d=32;
+let url="https://www.abibliadigital.com.br/api/"
 
 var app = new Vue({
     el:"#vuehome",
     data:{
-        carros:0
+        versiculo:0
     },
 
     created: function () {
-        axios.get('./listacarros.json').then(
+        axios.get('/verses/nvi/sl/23').then(
             (resposta) => {
-                this.carros = resposta.data.beldades;
-                console.log(this.carros);
+                this.versiculo = resposta.data;
+                console.log(this.versiculo);
 
             });
     }
